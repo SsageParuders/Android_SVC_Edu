@@ -14,7 +14,7 @@
 
 > When CPU find SVC instruction. It corms a interrupt.<br>
 > Then will execute kernel logic first.<br>
-> When we realize a function which SVC ,it is difficulte to use inline hook to hakc our function.<br>
+> When we realize a function which SVC ,it is difficulte to use inline hook to hack our function.<br>
 > In a word, SVC is more secure than syscall which comes from libc
 
 ### SYSCALL
