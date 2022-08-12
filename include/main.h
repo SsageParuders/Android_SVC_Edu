@@ -65,25 +65,3 @@
 #include <cstdlib>
 #include <dirent.h>
 #include <unistd.h>
-
-// 获取模块基地址
-uintptr_t get_module_base(const char *module_name) {
-    FILE *fp;
-    uintptr_t addr = 0;
-    char filename[32], buffer[1024];
-    fp = fopen("/proc/self/maps", "rt");
-    if (fp != nullptr) {
-        while (fgets(buffer, sizeof(buffer), fp)) {
-            if (strstr(buffer, module_name)) {
-#if defined(__LP64__)
-                sscanf(buffer, "%lx-%*s", &addr);
-#else
-                sscanf(buffer, "%x-%*s", &addr);
-#endif
-                break;
-            }
-        }
-        fclose(fp);
-    }
-    return addr;
-}
