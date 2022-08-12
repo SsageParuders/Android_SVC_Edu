@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Android",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "__aarch64__"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}
